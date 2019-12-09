@@ -1,5 +1,14 @@
 # Demo project for CSV Parser in Java
 
+### Overview
+This is a demo project on how to implement CSV parser. I have used:
+- `FieldsetMapper<T>` Interface which you can use to transform your data to object
+- Annotation to validate data. Annotations added include the following:
+1. `@MaxLen`: - Maximum length validation
+2. `@MinLen`: - Minimum length validation
+3. `@NotNull`: - Not null validation
+4. `@Regex`:- Regular expression validation
+
 ### Run Tests
 
 NB: Install maven
