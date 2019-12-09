@@ -17,7 +17,6 @@ public class AnnotationTests {
         csvReader=new CSVReader<Employee>( new EmployeeFieldsetMapper());
     }
 
-    @Test(expected = ValidationException.class)
     public void maxLenSuccessTest() throws Exception {
         String line = "3,Test Three,11-08-1996";
         Employee actualEmployee = csvReader.readLine(line);

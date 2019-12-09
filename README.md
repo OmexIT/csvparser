@@ -1,6 +1,13 @@
 # Demo project for CSV Parser in Java
 
-Sample usage:
+### Run Tests
+
+NB: Install maven
+
+- Navigate to project home
+- Run: `mvn test`
+
+### Sample usage:
 Given the following CSV file:
 ```csv
 1,Test One,22-06-1985
