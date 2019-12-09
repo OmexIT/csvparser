@@ -1,17 +1,12 @@
 package com.omexit.csvparser;
 
-import com.omexit.csvparser.annotations.NotNull;
-
-import javax.validation.constraints.Max;
 import java.util.Date;
 import java.util.Objects;
 import java.util.StringJoiner;
 
 public class Employee {
     private int id;
-    @NotNull
     private String name;
-    @Max(10)
     private Date dob;
 
     public int getId() {
