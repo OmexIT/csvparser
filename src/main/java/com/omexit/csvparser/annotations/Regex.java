@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface NotNull {
-    String message() default "Should not be null";
+public @interface Regex {
+    String expression();
+
+    String message() default "Pattern did not match";
 }

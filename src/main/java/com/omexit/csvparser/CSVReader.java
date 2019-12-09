@@ -1,10 +1,13 @@
 package com.omexit.csvparser;
 
+import com.omexit.csvparser.annotations.AnnotationHandler;
+
 public class CSVReader<T> {
 
     private static final String DEFAULT_SEPARATOR = ",";
     private String separator;
     private FieldsetMapper<T> fieldsetMapper;
+    private AnnotationHandler annotationHandler=new AnnotationHandler();
 
     /***
      * Initialize fieldset mapper with default line separator
@@ -33,6 +36,8 @@ public class CSVReader<T> {
      * @throws Exception
      */
     public T readLine(String line) throws Exception {
-        return fieldsetMapper.map(new FieldSet(line.split(separator)));
+        T t = fieldsetMapper.map(new FieldSet(line.split(separator)));
+        annotationHandler.handle(t);
+        return t;
     }
 }

@@ -7,6 +7,10 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface NotNull {
-    String message() default "Should not be null";
+public @interface MinLen {
+    int len() default 0;
+
+    int max() default -1;
+
+    String message() default "Too short";
 }
