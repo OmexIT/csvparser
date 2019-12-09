@@ -11,8 +11,8 @@ import java.util.StringJoiner;
 public class Employee {
     private int id;
     @NotNull
-    @MaxLen(len = 20)
-    @MinLen(len = 2)
+    @MaxLen(len = 20, message = "Should not be more than 20 characters")
+    @MinLen(len = 2, message = "Should not be less than 2 characters")
     private String name;
     private Date dob;
 
