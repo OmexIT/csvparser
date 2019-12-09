@@ -1,4 +1,4 @@
-package com.omexit.csvparser;
+package com.omexit.csvparser.exceptions;
 
 public class DateParseException extends RuntimeException{
 

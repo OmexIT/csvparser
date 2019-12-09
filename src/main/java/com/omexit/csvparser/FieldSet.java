@@ -1,5 +1,7 @@
 package com.omexit.csvparser;
 
+import com.omexit.csvparser.exceptions.DateParseException;
+
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
