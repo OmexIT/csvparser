@@ -1,11 +1,18 @@
 package com.omexit.csvparser;
 
+import com.omexit.csvparser.annotations.MaxLen;
+import com.omexit.csvparser.annotations.MinLen;
+import com.omexit.csvparser.annotations.NotNull;
+
 import java.util.Date;
 import java.util.Objects;
 import java.util.StringJoiner;
 
 public class Employee {
     private int id;
+    @NotNull
+    @MaxLen(len = 20)
+    @MinLen(len = 2)
     private String name;
     private Date dob;
 
