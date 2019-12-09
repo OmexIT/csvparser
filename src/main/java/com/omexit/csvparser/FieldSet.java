@@ -20,7 +20,8 @@ public class FieldSet {
     }
 
     public String readString(int index) {
-        return this.readAndTrim(index);
+        String readAndTrim = this.readAndTrim(index);
+        return readAndTrim.isEmpty() ? null : readAndTrim;
     }
 
     /***
@@ -90,6 +91,7 @@ public class FieldSet {
 
     /**
      * Read string and trim extra space
+     *
      * @param index index of the value in the array
      * @return
      */

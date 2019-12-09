@@ -11,7 +11,7 @@ public class AnnotationHandler {
         for (Field field : fields) {
             field.setAccessible(true);
             if (field.isAnnotationPresent(NotNull.class)) {
-                NotNull notNull = field.getAnnotation(NotNull.class);
+                NotNull notNull = field.getAnnotation(NotNull.class);System.err.println(field.get(ob) == null);
                 if (field.get(ob) == null) {
                     throw new ValidationException(notNull.message());
                 }

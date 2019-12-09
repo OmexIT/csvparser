@@ -72,4 +72,20 @@ public class AnnotationTests {
             assertEquals("Should not be less than 2 characters", e.getMessage());
         }
     }
+
+    @Test(expected = ValidationException.class)
+    public void notNullFailedTest() throws Exception {
+        String line = "3,,11-08-1996";
+        csvReader.readLine(line);
+    }
+
+    @Test
+    public void notNullFailedMessageTest() throws Exception {
+        String line = "3,,11-08-1996";
+        try {
+            csvReader.readLine(line);
+        }catch (ValidationException e){
+            assertEquals("Should not be null", e.getMessage());
+        }
+    }
 }
