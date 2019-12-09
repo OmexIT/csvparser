@@ -102,4 +102,3 @@ public class MainTest {
 ```
 
 #### TODO
-1. Implement validation annotations and tests
